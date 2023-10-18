@@ -18,8 +18,16 @@
             <use xlink:href="./img/sprite.svg#logo-orange"></use>
           </svg>
         </a>
-        <a class="header__link header__link_favourite" href="/favourite.html"
-          >Избранное
+        <a class="header__link header__link_favourite" href="/favourite.html">
+          <span>Избранное</span>
+          <svg
+            class="header__icon"
+            viewBox="0 0 240 32"
+            role="img"
+            aria-label="Логотип сервиса YouTVideo"
+          >
+            <use xlink:href="./img/sprite.svg#star-ob"></use>
+          </svg>
         </a>
       </div>
     </header>
@@ -27,24 +35,48 @@
       <section class="search">
         <div class="container search__container">
           <form class="search__form" action="">
-            <label class="search__label" for="">
-              <input class="search__input" type="search" />
-              <button class="search__btn" type="submit">поиск</button>
-            </label>
+            <input class="search__input" type="search" />
+            <button class="search__btn" type="submit">
+              <span>поиск</span>
+              <svg class="search__icon">
+                <use xlink:href="./img/sprite.svg#search"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </section>
 
       <section class="video">
         <div class="container video__container">
-          <iframe class="video__rolik" width="560" height="315" src="https://www.youtube.com/embed/GNbcn5fr3K8?si=l7qLXqVUHEantEDS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="video__player">
+            <iframe
+              class="video__iframe"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/GNbcn5fr3K8?si=l7qLXqVUHEantEDS"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
 
-          <h3 class="video__title">Философия Идущего к реке</h3>
-          <p class="video__channel">Правое полушарие интроверта</p>
-          <p class="video__description">1 575 581 просмотр Дата премьеры: 16 авг. 2024 г.
-            Смотрите наш курс-саммари «Как понимать философию» фоном.</p>
+          <div class="video__content">
+            <h2 class="video__title">Философия Идущего к реке</h2>
 
-            <button class="video__favourite" type="button"></button>
+            <p class="video__channel">Правое полушарие интроверта</p>
+            
+            <p class="video__info">
+              <span class="video__views">1 575 581 просмотр </span>
+              <span class="video__date">Дата премьеры: 16 авг. 2024 г.</span>
+            </p>
+
+            <p class="video__description">
+              Смотрите наш курс-саммари «Как понимать философию» фоном.
+            </p>
+          </div>
+
+          <button class="video__favourite" type="button"></button>
         </div>
       </section>
 
@@ -66,7 +98,19 @@
                   <p class="video-card__channel">Правое полушарие интроверта</p>
                   <p class="video-card__duration">31 мин 25 сек</p>
                 </a>
-                <button class="video-card__favourite" type="button"></button>
+                <button
+                  class="video-card__favourite"
+                  type="button"
+                  aria-label="Добавить в избранное"
+                >
+                  <svg class="search__icon">
+                    <use
+                      class="star-o"
+                      xlink:href="./img/sprite.svg#star-ob"
+                    ></use>
+                    <use class="star" xlink:href="./img/sprite.svg#star"></use>
+                  </svg>
+                </button>
               </article>
             </li>
 
@@ -83,7 +127,19 @@
                   <p class="video-card__channel">Правое полушарие интроверта</p>
                   <p class="video-card__duration">31 мин 25 сек</p>
                 </a>
-                <button class="video-card__favourite" type="button"></button>
+                <button
+                  class="video-card__favourite"
+                  type="button"
+                  aria-label="Добавить в избранное"
+                >
+                  <svg class="search__icon">
+                    <use
+                      class="star-o"
+                      xlink:href="./img/sprite.svg#star-ob"
+                    ></use>
+                    <use class="star" xlink:href="./img/sprite.svg#star"></use>
+                  </svg>
+                </button>
               </article>
             </li>
 
@@ -100,7 +156,19 @@
                   <p class="video-card__channel">Правое полушарие интроверта</p>
                   <p class="video-card__duration">31 мин 25 сек</p>
                 </a>
-                <button class="video-card__favourite" type="button"></button>
+                <button
+                  class="video-card__favourite"
+                  type="button"
+                  aria-label="Добавить в избранное"
+                >
+                  <svg class="search__icon">
+                    <use
+                      class="star-o"
+                      xlink:href="./img/sprite.svg#star-ob"
+                    ></use>
+                    <use class="star" xlink:href="./img/sprite.svg#star"></use>
+                  </svg>
+                </button>
               </article>
             </li>
           </ul>

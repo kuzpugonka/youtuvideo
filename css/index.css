@@ -1,3 +1,16 @@
+@font-face {
+  font-family: Inter, serif;
+  font-weight: 400;
+  src: url(../fonts/inter-v13-cyrillic_latin-regular.woff2);
+}
+
+@font-face {
+  font-family: Inter, serif;
+  font-weight: 900;
+  src: url(../fonts/inter-v13-cyrillic_latin-900.woff2);
+}
+
+
 html {
   position: relative;
   box-sizing: border-box;
@@ -14,15 +27,16 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: Inter, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
-  font-size: 16px;
-  color: #000;
+  font-size: 20px;
+  color: #292D32;
   background-color: #fff;
+  line-height: 1.2; /* 24px */
 }
 
 img,

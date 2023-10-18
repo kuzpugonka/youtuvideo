@@ -5,52 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YouTVideo - Удобный видеохостинг для тебя</title>
 
-    <link href="./css/normalise81.css" rel="stylesheet">
-    <link href="./css/index.css" rel="stylesheet">
+    <link href="./css/normalise81.css" rel="stylesheet" />
+    <link href="./css/index.css" rel="stylesheet" />
   </head>
   <body>
-    <header class="header">
-      <div class="container header__container">
-        <a class="header__link" href="/">
-          <svg
-            class="header__logo"
-            viewBox="0 0 240 32"
-            role="img"
-            aria-label="Логотип сервиса YouTVideo"
-          >
-            <use xlink:href="./img/sprite.svg#logo-orange"></use>
-          </svg>
-        </a>
-        <a class="header__link header__link_favourite" href="/favourite.html"
-          >Избранное
-        </a>
-      </div>
-    </header>
     <main>
       <section class="hero">
-        <div class="container hero__container">
-          <a class="hero__link" href="/favourite.html">Избранное </a>
-          <svg
-            class="hero__logo"
-            viewBox="0 0 240 32"
-            role="img"
-            aria-label="Логотип сервиса YouTVideo"
-          >
-            <use xlink:href="./img/sprite.svg#logo-white"></use>
-          </svg>
+        <div class="container">
+          <div class="hero__container">
+            <a class="hero__link" href="/favourite.html">
+              <span>Избранное</span>
+              <svg class="hero__icon">
+                <use xlink:href="./img/sprite.svg#star-ow"></use>
+              </svg>
+            </a>
+            <svg
+              class="hero__logo"
+              viewBox="0 0 240 32"
+              role="img"
+              aria-label="Логотип сервиса YouTVideo"
+            >
+              <use xlink:href="./img/sprite.svg#logo-white"></use>
+            </svg>
 
-          <h1 class="hero__title">Смотри. Загружай. Создавай</h1>
-          <p class="hero__tagline">Удобный видеохостинг для тебя</p>
+            <h1 class="hero__title">Смотри. Загружай. Создавай</h1>
+            <p class="hero__tagline">Удобный видеохостинг для тебя</p>
+          </div>
         </div>
       </section>
 
       <section class="search">
         <div class="container search__container">
           <form class="search__form" action="">
-            <label class="search__label" for="">
-              <input class="search__input" type="search" />
-              <button class="search__btn" type="submit">поиск</button>
-            </label>
+            <input class="search__input" type="search" />
+            <button class="search__btn" type="submit">
+              <span>поиск</span>
+              <svg class="search__icon">
+                <use xlink:href="./img/sprite.svg#search"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </section>
@@ -73,7 +66,16 @@
                   <p class="video-card__channel">Правое полушарие интроверта</p>
                   <p class="video-card__duration">31 мин 25 сек</p>
                 </a>
-                <button class="video-card__favourite" type="button"></button>
+                <button
+                  class="video-card__favourite"
+                  type="button"
+                  aria-label="Добавить в избранное"
+                >
+                  <svg class="search__icon">
+                    <use class="star-o" xlink:href="./img/sprite.svg#star-ob"></use>
+                    <use class="star" xlink:href="./img/sprite.svg#star"></use>
+                  </svg>
+                </button>
               </article>
             </li>
 
@@ -90,7 +92,16 @@
                   <p class="video-card__channel">Правое полушарие интроверта</p>
                   <p class="video-card__duration">31 мин 25 сек</p>
                 </a>
-                <button class="video-card__favourite" type="button"></button>
+                <button
+                  class="video-card__favourite"
+                  type="button"
+                  aria-label="Добавить в избранное"
+                >
+                  <svg class="search__icon">
+                    <use class="star-o" xlink:href="./img/sprite.svg#star-ob"></use>
+                    <use class="star" xlink:href="./img/sprite.svg#star"></use>
+                  </svg>
+                </button>
               </article>
             </li>
 
@@ -107,7 +118,16 @@
                   <p class="video-card__channel">Правое полушарие интроверта</p>
                   <p class="video-card__duration">31 мин 25 сек</p>
                 </a>
-                <button class="video-card__favourite" type="button"></button>
+                <button
+                class="video-card__favourite"
+                type="button"
+                aria-label="Добавить в избранное"
+              >
+                <svg class="search__icon">
+                  <use class="star-o" xlink:href="./img/sprite.svg#star-ob"></use>
+                  <use class="star" xlink:href="./img/sprite.svg#star"></use>
+                </svg>
+              </button>
               </article>
             </li>
           </ul>
@@ -127,22 +147,30 @@
           </svg>
         </a>
 
-          <ul class="footer__developers">
-            <li class="footer__developers-item">
-              Designer:
-              <a class="footer__developers-link" href="https://t.me/Mrshmallowww" target="_blank" rel="noopener"
-                >Anastasia Ilina</a
-              >
-            </li>
-            <li class="footer__developers-item">
-              Developer:
-              <a class="footer__developers-link" href="https://t.me/kuzpugonka" target="_blank" rel="noopener"
-                >Sofia Terekhova</a
-              >
-            </li>
-          </ul>
+        <ul class="footer__developers">
+          <li class="footer__developers-item">
+            Designer:
+            <a
+              class="footer__developers-link"
+              href="https://t.me/Mrshmallowww"
+              target="_blank"
+              rel="noopener"
+              >Anastasia Ilina</a
+            >
+          </li>
+          <li class="footer__developers-item">
+            Developer:
+            <a
+              class="footer__developers-link"
+              href="https://t.me/kuzpugonka"
+              target="_blank"
+              rel="noopener"
+              >Sofia Terekhova</a
+            >
+          </li>
+        </ul>
 
-          <p class="footer__copiright">© You-Tvideo, 2023 </p>
+        <p class="footer__copiright">© You-Tvideo, 2023</p>
       </div>
     </footer>
   </body>
