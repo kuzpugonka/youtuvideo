@@ -4,6 +4,30 @@ const SEARCH_URL = "https://www.googleapis.com/youtube/v3/search";
 
 const videoListItems = document.querySelector(".video-list__items");
 
+const convertISOToReadbleDuration = (isoDuration) => {
+  const hoursMatch = isoDuration.match(/(\d+)H/);
+  const minutesMatch = isoDuration.match(/(\d+)M/);
+  const secundsMatch = isoDuration.match(/(\d+)S/);
+
+  const hours = hoursMatch ? parseInt(hoursMatch[1]) : 0;
+  const minutes = minutesMatch ? parseInt(minutesMatch[1]) : 0;
+  const secunds = secundsMatch ? parseInt(secundsMatch[1]) : 0;
+
+  let result = "";
+
+  if (hours > 0) {
+    result += `${hours} ч. `;
+  }
+  if (minutes > 0) {
+    result += `${minutes} мин. `;
+  }
+  if (secunds > 0) {
+    result += `${secunds} сек.`;
+  }
+
+  return result.trim();
+};
+
 const fetchTrendingVideos = async () => {
   try {
     const url = new URL(VIDEOS_URL);
@@ -26,26 +50,30 @@ const fetchTrendingVideos = async () => {
 };
 
 const dislayVideo = (videos) => {
-
   videoListItems.textContent = "";
 
   const listVideos = videos.items.map((video) => {
     const li = document.createElement("li");
     li.classList.add("video-list__item");
-    console.log('video: ', video);
+    console.log("video: ", video);
 
     li.innerHTML = `
       <article class="video-card">
         <a class="video-card__link" href="/video.html?id=${video.id}">
           <img
             class="video-card__thumbnail"
-            src="${video.snippet.thumbnails.standard?.url || video.snippet.thumbnails.high?.url}"
+            src="${
+              video.snippet.thumbnails.standard?.url ||
+              video.snippet.thumbnails.high?.url
+            }"
             alt="Превью видео ${video.snippet.title}"
           />
 
           <h3 class="video-card__title">${video.snippet.title}</h3>
           <p class="video-card__channel">${video.snippet.channelTitle}</p>
-          <p class="video-card__duration">${video.contentDetails.duration}</p>
+          <p class="video-card__duration">${convertISOToReadbleDuration(
+            video.contentDetails.duration
+          )}</p>
         </a>
         <button
           class="video-card__favourite "
@@ -63,7 +91,7 @@ const dislayVideo = (videos) => {
     return li;
   });
 
-  videoListItems.append(...listVideos)
+  videoListItems.append(...listVideos);
 };
 
 fetchTrendingVideos().then(dislayVideo);
