@@ -282,7 +282,7 @@ iframe {
 .video-card__favourite .star {
   display: none;
 }
-.video-card__favourite_active .star {
+.video-card__favourite.active .star {
   display: block;
 }
 .video-card__icon {
@@ -361,10 +361,10 @@ iframe {
 .video__link .video__favourite {
   display: none;
 }
-.video__link_active .video__no-favourite {
+.video__link.active .video__no-favourite {
   display: none;
 }
-.video__link_active .video__favourite {
+.video__link.active .video__favourite {
   display: block;
 }
 .video__icon {
