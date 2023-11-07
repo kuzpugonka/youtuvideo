@@ -240,10 +240,10 @@ iframe {
 
   display: grid;
   grid-template-columns: repeat(
-    var(--grid-count), 
+    var(--grid-count),
     calc(
-    (100% / var(--grid-count)) - 
-      (var(--grid-column-gap) * (var(--grid-count) - 1) / var(--grid-count))
+      (100% / var(--grid-count)) -
+        (var(--grid-column-gap) * (var(--grid-count) - 1) / var(--grid-count))
     )
   );
   gap: 40px var(--grid-column-gap);
@@ -251,6 +251,9 @@ iframe {
 
 .video-card {
   position: relative;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 2px 2px 6px 4px rgba(0, 0, 0, 0.3);
 }
 
 .video-card__thumbnail {
@@ -408,6 +411,16 @@ iframe {
   margin-top: 16px;
 }
 
+.preload {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: auto;
+}
+.preload__text {
+  color: #ff6a00;
+}
+
 @media (max-width: 1024px) {
   .container {
     --container-width: 942px;
@@ -508,7 +521,7 @@ iframe {
     flex-direction: column-reverse;
     gap: 24px;
   }
- 
+
   .footer {
     padding: 37px 0;
   }
@@ -541,7 +554,7 @@ iframe {
   .hero__tagline {
     font-size: 16px;
   }
-  
+
   .video-list__items {
     --grid-count: 1;
     gap: 20px;
@@ -556,7 +569,6 @@ iframe {
   .video-card__channel {
     margin-bottom: 12px;
   }
- 
 
   .video__title {
     font-size: 24px;
@@ -571,8 +583,8 @@ iframe {
   }
   .video__description {
     font-size: 16px;
-}
-  
+  }
+
   .footer {
     padding: 24px 0;
   }
